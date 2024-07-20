@@ -102,6 +102,13 @@ ul {
 .contacts-us .link:focus {
   color: #404bbf;
 }
+.link:hover::before,
+.link:hover::after {
+  content: "";
+  color: #404bbf;
+  border-bottom: 4px solid #404bbf;
+  border-radius: 2px;
+}
 .contacts-us {
   font-style: normal;
 }
