@@ -74,6 +74,7 @@ ul {
   gap: 40px;
 }
 .top-menu-item {
+  position: relative;
 }
 .logo-hader-part {
   color: #2e2f42;
@@ -92,7 +93,7 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  display: inline-block;
+  display: flex;
   padding: 24px 0;
 }
 
@@ -102,12 +103,17 @@ ul {
 .contacts-us .link:focus {
   color: #404bbf;
 }
-.link:hover::before,
-.link:hover::after {
+.top-menu-item .link:hover::after {
   content: "";
-  color: #404bbf;
-  border-bottom: 4px solid #404bbf;
+  height: 4px;
+  width: 100%;
+  background-color: #404bbf;
   border-radius: 2px;
+  display: inline-block;
+  position: absolute;
+  margin-bottom: 20px;
+  left: 0;
+  bottom: -20px;
 }
 .contacts-us {
   font-style: normal;
@@ -166,6 +172,13 @@ ul {
 }
 .orders {
   background-color: #2e2f42;
+  background: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/people-office.jpg);
+  box-shadow: inset blur 50% grey;
   text-align: center;
   padding: 188px 0;
 }
@@ -218,6 +231,17 @@ ul {
 .concept-item {
   width: calc((100% - 72px) / 4);
 }
+.concept-icon-container {
+  background-color: #f4f4fd;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.concept-icon {
+  display: block;
+  margin: 24px auto;
+}
 .concept-item-header {
   font-weight: 500;
   font-size: 20px;
@@ -247,7 +271,8 @@ ul {
   margin-right: 24px;
   text-align: center;
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 1px 0px #2e2f4229;
+  box-shadow: 0px 2px 1px 0px #2e2f4214, 0px 1px 1px 0px #2e2f4229,
+    0px 1px 6px 0px #2e2f4214;
 }
 .team-item:last-child {
   margin-right: 0;
@@ -281,6 +306,32 @@ ul {
   letter-spacing: 0.02em;
   text-align: center;
 }
+.social-links {
+  display: flex;
+  gap: 24px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-self: flex-end;
+  margin-top: 8px;
+}
+.social-links .soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+} /*
+.social-links .soc-link:hover {
+  background-color: #fff;
+}
+.social-links .icon {
+  fill: #fff;
+}
+.social-links .soc-link:hover .icon {
+  fill: #03a9f4;
+}*/
 .footer-desc {
   font-size: 16px;
   font-weight: 400;
