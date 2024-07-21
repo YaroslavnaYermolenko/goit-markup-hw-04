@@ -343,16 +343,14 @@ ul {
 }
 .portfolio-item:hover .overlay {
   transform: translateY(0);
-} /*
+}
 .social-links .soc-link:hover {
-  background-color: #;
+  background-color: #31d0aa;
 }
-.social-links .icon {
-  fill: #;
+.social-links .social-icon {
+  fill: #f4f4fd;
 }
-.social-links .soc-link:hover .icon {
-  fill: #;
-}*/
+
 .footer-desc {
   font-size: 16px;
   font-weight: 400;
@@ -383,6 +381,7 @@ body .footer-desc {
 }
 .footer .container {
   display: flex;
+  align-items: baseline;
 }
 .soc-link-block {
 }
