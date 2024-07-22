@@ -117,9 +117,8 @@ ul {
   border-radius: 2px;
   display: inline-block;
   position: absolute;
-  margin-bottom: 20px;
   left: 0;
-  bottom: -20px;
+  bottom: -1px;
 }
 .contacts-us {
   font-style: normal;
@@ -367,8 +366,10 @@ ul {
 .portfolio-item:hover .overlay {
   transform: translateY(0);
 }
-.social-links .soc-link:hover {
-  background-color: #31d0aa;
+.social-links .soc-link:hover,
+.social-links .soc-link:focus {
+  background-color: #404bbf; /*
+  background-color: #31d0aa;*/
 }
 .social-links .social-icon {
   fill: #f4f4fd;
@@ -405,6 +406,9 @@ body .footer-desc {
 .footer .container {
   display: flex;
   align-items: baseline;
+}
+.footer .social-links {
+  gap: 16px;
 }
 .soc-link-block {
 }
